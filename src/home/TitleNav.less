@@ -1,0 +1,49 @@
+@import '../default.less';
+
+@home-nav-height: 35px;
+@guide-title-width: 262px;
+.titles-nav{
+  .center;
+  width: @web-width;
+  height: @home-nav-height;
+}
+
+.g-title{
+  .float-left;
+  height: @home-nav-height;
+  width: @guide-title-width;
+  background: @web-theme-color;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  text-align: center;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.wlf-nav{
+  .float-left;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: @web-width - @guide-title-width;
+  height: @home-nav-height;
+  background: rgba(@web-theme-color, 0.6);
+  li{
+    .float-left;
+    width: 100px;
+    height: @home-nav-height;
+    padding: 0 40px;
+    line-height: @home-nav-height;
+    a{
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a:hover{
+      font-size: 21px;
+    }
+  }
+}
