@@ -8,8 +8,7 @@ class SidebarNavItem extends PureComponent{
     guideLi: []
   }
 
-  componentWillMount()
-  {
+  UNSAFE_componentWillMount = () => {
     const {menus} = this.props;
 
     this.setState({
@@ -30,7 +29,7 @@ class SidebarNavItem extends PureComponent{
     let itemList = [];
     if(!!colItems)
     colItems.forEach((val,index) => {
-      if((index % 4) === 0)//每三个为一行
+      if((index % 3) === 0)//每三个为一行
         itemList[itemList.length] = {
           guides: [val]
         };
