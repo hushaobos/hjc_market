@@ -5,7 +5,7 @@ import Sidebar from './Sidebar';
 class MainNav extends PureComponent{
   render(){
     return (
-    <div class="sa-main">
+    <div className="sa-main">
       <Sidebar/>
     </div>
     );

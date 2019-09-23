@@ -1,0 +1,25 @@
+@import './Sidebar.less';
+
+.guide{
+  margin: 3px 0;
+  padding:0 20px;
+}
+
+.p-guide{
+  .guide;
+  height: 30px;
+  line-height: 30px;
+}
+
+.c-guide{
+  .guide;
+  height: 25px;
+  line-height: 25px;
+}
+
+.p-guide:hover,.c-guide:hover{
+  background: rgba(@web-theme-color, 0.35);
+  a{
+    color: @web-theme-color;
+  }
+}

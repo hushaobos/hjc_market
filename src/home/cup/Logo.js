@@ -5,7 +5,7 @@ class Logo extends PureComponent{
   render(){
     return (
     <div className="logo">
-	    <img src={'https://hjc718-test.oss-cn-shenzhen.aliyuncs.com/home/logo/logo.png'}/>
+	    <img alt='窝立方' src={'https://hjc718-test.oss-cn-shenzhen.aliyuncs.com/home/logo/logo.png'}/>
     </div>);
   }
 }

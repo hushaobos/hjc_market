@@ -1,13 +1,16 @@
 @import '../../default.less';
 
 @main-height:400px;
+.main-default{
+  height: @main-height;
+}
 
 .main-item{
   .float-left;
-  height: @main-height;
+  .main-default;
 }
 .sa-main{
   .center;
   .home-item;
-  height: @main-height;
+  .main-default;
 }
