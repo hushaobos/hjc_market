@@ -1,0 +1,26 @@
+@web-width: 1242px;
+@width-600: 600px;
+
+@web-theme-color:#CBB993;
+
+.center{
+    margin: 0 auto;
+}
+
+.float-left{
+    float: left;
+}
+
+.color-gradient(@startcolor,@endcolor){
+    background: @endcolor;
+    background: -moz-linear-gradient(left, @startcolor 0%,  @endcolor 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, @startcolor), color-stop(100%, @endcolor));
+    background: -webkit-linear-gradient(left, @startcolor 0%, @endcolor 100%);
+    background: -o-linear-gradient(left, @startcolor 0%, @endcolor 100%);
+    background: -ms-linear-gradient(left, @startcolor 0%,  @endcolor 100%);
+    background: linear-gradient(to right, @startcolor 0%, @endcolor 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=@startcolor, endColorstr=@endcolor, GradientType=1 );
+}
+.home-item{
+    width: @web-width;
+}
