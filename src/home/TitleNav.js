@@ -32,7 +32,7 @@ class TitleNav extends PureComponent{
           {
             navs.map((value,index) => (
               <li key={index}>
-                <a href={value.link}>{value.title}</a>
+                <a  target='blank' href={value.link}>{value.title}</a>
               </li>
             ))
           }

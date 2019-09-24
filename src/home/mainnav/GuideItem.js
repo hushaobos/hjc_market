@@ -7,7 +7,7 @@ class GuideItem extends PureComponent{
     const {menu} = this.props;
     return (
       menu.guides.map((value,index) =>(
-        <a key={index} className={menu.parent ? 'p-guide-i' : 'c-guide-i'} href={value.link}>{value.label}</a>
+        <a  target='blank' key={index} className={menu.parent ? 'p-guide-i' : 'c-guide-i'} href={value.link}>{value.label}</a>
         ))
     );
   }

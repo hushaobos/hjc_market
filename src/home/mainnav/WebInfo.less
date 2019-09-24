@@ -1,0 +1,19 @@
+@import '../../default.less';
+@import './MainNav.less';
+
+@webInfo-width: @web-width - @advert-width - @main-margin * 2 - @sidebar-width;
+@WebInfo-height: @main-height - @main-margin;
+@user-bd-height: 150px;
+
+.webInfo-default(@height:auto){
+  width: @webInfo-width;
+  height: @height;
+}
+
+.main-right{
+  .float-left;
+  .webInfo-default(@WebInfo-height);
+  margin: 10px 0;
+  background: white;
+}
+
