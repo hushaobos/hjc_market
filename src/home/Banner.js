@@ -1,7 +1,6 @@
 import React,{PureComponent} from 'react';
 import './Banner.less';
 
-
 class HomeBanner extends PureComponent{
   render(){
     return (
