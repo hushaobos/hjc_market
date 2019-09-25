@@ -1,0 +1,33 @@
+@import './Cup.less';
+
+@qrcode-size: 80px;
+@qrcode-bd-width: 250px;
+@qrcode-span-height:@top-height - @qrcode-size;
+
+.qr-code-bd{
+  float: right;
+  width: @qrcode-bd-width;
+  height: @top-height;
+  margin: (@cup-height - @qrcode-size - @cup-padding * 2) / 2 0;
+  ul{
+    .ul-none;
+    li{
+      .float-left;
+      width: @top-height;
+      height: @top-height;
+      margin: 0 (@qrcode-bd-width - @top-height * 2) / 4;
+      box-sizing: border-box;
+      img{
+        width: @qrcode-size;
+        height: @qrcode-size;
+      }
+      span{
+        display: block;
+        width: @top-height;
+        height: @qrcode-span-height;
+        line-height: @qrcode-span-height;
+        font-size:13px;
+      }
+    }
+  }
+}
