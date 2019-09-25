@@ -1,6 +1,6 @@
 @web-width: 1242px;
 @width-600: 600px;
-
+@web-model-margin: 10px;
 @web-theme-color:#CBB993;
 
 .center{
@@ -15,6 +15,14 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+}
+
+.web-model-default(@web-height:100px,@bg-color:white)
+{
+    .center;
+    width: @web-width;
+    height: @web-height;
+    background-color: @bg-color;
 }
 
 .color-gradient(@startcolor,@endcolor){

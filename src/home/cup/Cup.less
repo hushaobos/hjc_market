@@ -1,20 +1,24 @@
 @import '../../default.less';
 
 @cup-height: 180px;
+@logo-size: 141px;
+@cup-margin: 40px;
+@cup-padding: 40px;
+@top-height:@cup-height - @cup-margin * 2;
 .b-cup
 {
   width: 100%;
   height: @cup-height;
   background: white;
-  padding: 25px 0;
+  padding: @cup-padding 0;
   box-sizing: border-box;
 }
 
 .top{
   .center;
   width: @web-width;
-  height: 130px;
+  height: @top-height;
   box-sizing: border-box;
-  padding:40px 0;
+  padding:0;
   text-align: center;
 }

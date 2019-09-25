@@ -1,7 +1,8 @@
 import React,{PureComponent} from 'react';
 import Logo from './Logo';
 import HomeSearch from './Search';
-import './Cup.less'
+import './Cup.less';
+import QRcode from './QRcode';
 
 class Cup extends PureComponent{
   render(){
@@ -10,6 +11,7 @@ class Cup extends PureComponent{
         <div className='top'>
           <Logo></Logo>
           <HomeSearch></HomeSearch>
+          <QRcode></QRcode>
         </div>
       </div>);
   }

@@ -1,4 +1,4 @@
-@import '../../default.less';
+@import './Cup.less';
 
 @search-box-height: 46px;
 @search-element-height: 32px;
@@ -12,8 +12,9 @@
   border: 2px solid @web-theme-color;
 }
 .search{
-  .center;
+  .float-left;
   width: @width-600;
+  margin: ((@top-height - @search-box-height) / 2) 0 0 (@web-width - @width-600) / 2 - @logo-size;
   height: @search-box-height;
   box-sizing: border-box;
 
