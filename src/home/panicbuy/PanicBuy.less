@@ -1,10 +1,83 @@
 @import '../../default.less';
 
+@spike-title-height: 55px;
+@spike-good-height: 330px;
+@spike-good-width: 290px;
 .spike{
-  .web-model-default(265px);
+  .web-model-default(405px);
 }
 
 .spike-bd{
-  .web-model-default(255px);
-  margin-top: @web-model-margin;
+  .web-model-default(385px);
+  margin-top: 20px;
+}
+
+.spike-title{
+  .web-model-default(@spike-title-height,rgba(@web-theme-color,0.05));
+  > h2{
+    line-height: @spike-title-height;
+    font-size: 20px;
+    font-weight: 500;
+    text-indent: 3mm;
+    display: block;
+    width: 140px;
+    height: @spike-title-height;
+    float: left;
+    margin: 0;
+    color: @web-theme-color;
+  }
+  > a{
+    .a-default(@web-theme-color;);
+    float: right;
+    margin: 10px;
+  }
+  > a:hover{
+    .a-default-hover(@web-theme-color);
+  }
+}
+
+.spike-goods{
+  .web-model-default(@spike-good-height);
+}
+
+.spike-good{
+  width: @spike-good-width;
+  height: @spike-good-height;
+  margin: 10px;
+  .float-left;
+  > a{
+    .a-default;
+  }
+}
+.spike-good-pic,.spike-good-pic > img{
+  width: @spike-good-width;
+  height: 250px;
+}
+
+.spike-good-price
+{
+  width: @spike-good-width;
+  height: 30px;
+  line-height: 30px;
+  > strong{
+    float: right;
+    text-align: right;
+    color: @price-color;
+    margin-right: 15px;
+  }
+}
+.spike-good-buy{
+  width: @spike-good-width;
+  height: 50px;
+  line-height: 50px;
+  text-align: right;
+}
+.spike-time{
+  float: left;
+  font-size: 15px;
+}
+.spike-buy-btn{
+  background-color: @web-theme-color;
+  padding: 5px;
+  color: white;
 }

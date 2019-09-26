@@ -1,6 +1,5 @@
 import React,{Component} from 'react';
 
-let delayTime;
 // 倒计时组件
 class TimeCountDown extends Component {
   state = {
@@ -8,19 +7,27 @@ class TimeCountDown extends Component {
     hour: 0,
     minute: 0,
     second: 0,
+    delayTime: 0
   }
 
   componentDidMount() {
-    delayTime = this.props.time;
+    const {time} = this.props;
+    this.setState({
+      delayTime: time
+    });console.log(this.state,time);
     this.startCountDown();
   }
 
   componentDidUpdate() {
+    let {delayTime} = this.state;
     if (this.props.time !== delayTime) {
       delayTime = this.props.time;
 
       this.clearTimer();
       this.startCountDown();
+      this.setState({
+        delayTime: delayTime
+      });
     }
   }
 
@@ -35,6 +42,7 @@ class TimeCountDown extends Component {
 
   // 开启计时
   startCountDown() {
+    const {delayTime} = this.state;
     if (delayTime && !this.timer) {
       this.timer = setInterval(() => {
         this.doCount();
@@ -43,6 +51,8 @@ class TimeCountDown extends Component {
   }
 
   doCount() {
+    const {delayTime} = this.state;
+
     const {
       onTimeout,
     } = this.props;

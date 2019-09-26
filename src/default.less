@@ -2,6 +2,8 @@
 @width-600: 600px;
 @web-model-margin: 10px;
 @web-theme-color:#CBB993;
+@font-default-color:#666666;
+@price-color: #ff5900;
 
 .center{
     margin: 0 auto;
@@ -17,12 +19,13 @@
     list-style-type: none;
 }
 
-.web-model-default(@web-height:100px,@bg-color:white)
+.web-model-default(@web-height:100px,@bg-color:white,@font-color: @font-default-color)
 {
     .center;
     width: @web-width;
     height: @web-height;
     background-color: @bg-color;
+    color:@font-color;
 }
 
 .color-gradient(@startcolor,@endcolor){
@@ -37,4 +40,16 @@
 }
 .home-item{
     width: @web-width;
+}
+
+.a-default(@a-color: @font-default-color)
+{
+    text-decoration: none;
+    color: @a-color;
+}
+
+.a-default-hover(@a-h-color: @font-default-color)
+{
+    text-decoration: underline;
+    color: @a-h-color;
 }
