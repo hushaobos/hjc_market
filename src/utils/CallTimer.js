@@ -9,23 +9,30 @@ class CallTimer extends Component {
     this.forceUpdate();
   }
   render() {
-    const {time,className} = this.props;
+    const {
+      startTime,
+      endTime,
+      className,
+      endCountdown
+    } = this.props;
+
     // 传递render函数
     return (
       <span className={className}>
-        剩余时间
         <TimeCountDown
-            time={time}
-            onTimeout={() => { this.onTimeout(); }}
-
-            render={({day , hour, minute, second }) => {
-              return (
-                <span>
-                  {day}天 {formateTimeStr(hour)}:{formateTimeStr(minute)}:{formateTimeStr(second)}
-                </span>
-              );
-            }}
-          />
+          startTime={startTime}
+          endTime={endTime}
+          onTimeout={() => { this.onTimeout(); }}
+          endCountdown={endCountdown}
+          countDownRender={({day , hour, minute, second ,stage}) => {
+            return (
+              <span>
+                {stage === 0 ? '距离开始 ' : '剩余时间 '}
+                {day}天{formateTimeStr(hour)}:{formateTimeStr(minute)}:{formateTimeStr(second)}
+              </span>
+            );
+          }}
+        />
       </span>
     )
   }

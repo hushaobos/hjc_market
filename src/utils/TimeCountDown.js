@@ -1,34 +1,26 @@
-import React,{Component} from 'react';
+import React,{PureComponent} from 'react';
 
 // 倒计时组件
-class TimeCountDown extends Component {
+class TimeCountDown extends PureComponent {
   state = {
-    day: 0,
-    hour: 0,
-    minute: 0,
-    second: 0,
-    delayTime: 0
+    day: 10,
+    hour: 10,
+    minute: 10,
+    second: 10,
+    delayTime: 0,
+    stage: 0
   }
 
   componentDidMount() {
-    const {time} = this.props;
-    this.setState({
-      delayTime: time
-    });console.log(this.state,time);
     this.startCountDown();
   }
 
   componentDidUpdate() {
-    let {delayTime} = this.state;
-    if (this.props.time !== delayTime) {
-      delayTime = this.props.time;
+    const {
+      endCountdown
+    } = this.props;
 
-      this.clearTimer();
-      this.startCountDown();
-      this.setState({
-        delayTime: delayTime
-      });
-    }
+    endCountdown(this.isStartSpike());//判断是否大于等于预定时间
   }
 
   timer = null;
@@ -43,6 +35,7 @@ class TimeCountDown extends Component {
   // 开启计时
   startCountDown() {
     const {delayTime} = this.state;
+
     if (delayTime && !this.timer) {
       this.timer = setInterval(() => {
         this.doCount();
@@ -50,8 +43,20 @@ class TimeCountDown extends Component {
     }
   }
 
+  resetTime = () =>{
+    this.setState({
+      day: 0,
+      hour: 0,
+      minute: 0,
+      second: 0
+    });
+  }
+
   doCount() {
-    const {delayTime} = this.state;
+    const {
+      delayTime,
+      stage
+    } = this.state;
 
     const {
       onTimeout,
@@ -61,11 +66,22 @@ class TimeCountDown extends Component {
     const timeDiffSecond = (delayTime - `${Date.now()}`.replace(/\d{3}$/, '000')) / 1000;
 
     if (timeDiffSecond <= 0) {
-      this.clearTimer();
-      if (typeof onTimeout === 'function') {
-        onTimeout();
+      if(stage === 0)
+      {
+        this.setState({
+          delayTime: this.props.endTime,
+          stage: 1
+        });
+        return;
       }
-      return;
+      else{
+        this.resetTime();
+        this.clearTimer();
+        if (typeof onTimeout === 'function') {
+          onTimeout();
+        }
+        return;
+      }
     }
 
     const day = Math.floor(timeDiffSecond / 86400);
@@ -77,16 +93,37 @@ class TimeCountDown extends Component {
       day,
       hour,
       minute,
-      second,
+      second
     });
+  }
+
+  isStartSpike = () =>
+  {
+    const {stage} = this.state;
+    const {
+      day,
+      hour,
+      minute,
+      second
+    } = this.state;
+    const surplusTime = day + hour + minute + second;
+    return stage === 1 || !surplusTime;
   }
 
   render() {
     const {
-      render,
+      countDownRender,
+      startTime,
+      endTime
     } = this.props;
 
-    return render({
+    const {
+      stage
+    } = this.state;
+
+    this.state.delayTime = stage === 0 ? startTime : endTime;
+
+    return countDownRender({
       ...this.state,
     });
   }
