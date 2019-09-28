@@ -4,9 +4,12 @@
 @web-theme-color:#CBB993;
 @font-default-color:#666666;
 @price-color: #ff5900;
+@Block-width: 616px;
+@box-head-height: 55px;
+@box-head-font: 20px;
 
-.center{
-    margin: 0 auto;
+.center(@top-margin: 0){
+    margin: @top-margin auto;
 }
 
 .float-left{
@@ -19,9 +22,17 @@
     list-style-type: none;
 }
 
-.web-model-default(@web-height:100px,@bg-color:white,@font-color: @font-default-color)
+.box-default(@width: @Block-width,@height: 100px,@bgcolor: white)
 {
-    .center;
+    width: @width;
+    height: @height;
+    background-color: @bgcolor;
+    .float-left;
+}
+
+.web-model-default(@web-height:100px,@bg-color:white,@font-color: @font-default-color,@top-margin: 0)
+{
+    .center(@top-margin);
     width: @web-width;
     height: @web-height;
     background-color: @bg-color;

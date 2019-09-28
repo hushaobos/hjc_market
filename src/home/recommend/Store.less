@@ -1,0 +1,36 @@
+@import './Recommend.less';
+
+.stores{
+  .box-default(@Block-width,@recommend-height);
+}
+
+.stores-head{
+  width: @Block-width;
+  height: @box-head-height;
+  line-height: @box-head-height;
+  > h2{
+    .float-left;
+    padding: 0;
+    margin: 0;
+    font-size: @box-head-font;
+    font-weight: 500;
+    text-indent: 3mm;
+    color: @price-color;
+    width: 140px;
+    height: @box-head-height;
+  }
+  > a{
+    float: right;
+    margin:0 10px;
+    .a-default(@price-color);
+  }
+  > a:hover{
+    .a-default-hover(red);
+  }
+}
+.stores-p{
+  width: @Block-width;
+  height:@recommend-height - @box-head-height;
+}
+.store-bd{
+}
