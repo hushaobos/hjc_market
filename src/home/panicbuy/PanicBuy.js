@@ -4,12 +4,12 @@ import CallTimer from '../../utils/CallTimer';
 
 class SpikeGoodLoaded extends PureComponent{
   state = {
-    linkTitle: '预约抢购',
+    linkTitle: '立即预约',
     btnStyle: 'spike-appointment-btn'
   }
 
   endCountdown = (isEnd) =>{
-    const linkTitle = isEnd ? '马上抢购' : '预约抢购';
+    const linkTitle = isEnd ? '马上抢购' : '立即预约';
     const btnStyle = isEnd ? 'spike-buy-btn' : 'spike-appointment-btn';
     this.setState({
       linkTitle: linkTitle,
