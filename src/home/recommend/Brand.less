@@ -1,10 +1,11 @@
 @import './Recommend.less';
 
-.stores{
+.brands{
   .box-default(@Block-width,@recommend-height);
+  margin-left: 10px;
 }
 
-.stores-head{
+.brands-head{
   width: @Block-width;
   height: @box-head-height;
   line-height: @box-head-height;
@@ -15,61 +16,61 @@
     font-size: @box-head-font;
     font-weight: 500;
     text-indent: 3mm;
-    color: @price-color;
+    color: #4CAF50;
     width: 140px;
     height: @box-head-height;
   }
   > a{
     float: right;
     margin:0 10px;
-    .a-default(@price-color);
+    .a-default(#4CAF50);
   }
   > a:hover{
-    .a-default-hover(red);
+    .a-default-hover(green);
   }
 }
-.stores-p{
+.brands-p{
   width: @Block-width;
   height:@recommend-height - @box-head-height;
 }
-.store-bd{
+.brand-bd{
   width: @recommend-item-size;
   height: @recommend-item-height;
   margin: 0 16px;
   .float-left;
 }
-.store-bd:hover .store-slogan
-{
-  color: @price-color;
-}
-.store-t,.store-imgs,.store-img-b,.store-img-s{
+.brand-t,.brand-imgs,.brand-img-b,.brand-img-s{
   > a{
     .a-default;
     display: block;
   }
 }
-.store-imgs,.store-t
+.brand-bd:hover .brand-slogan
+{
+  color: @price-color;
+}
+.brand-imgs,.brand-t
 {
   width: @recommend-item-size;
 }
-.store-t{
+.brand-t{
   width: @recommend-item-size;
   height: @recommend-item-title-height;
   line-height: @recommend-item-title-height;
 }
-.store-slogan{
+.brand-slogan{
   font-size: @slogan-font-szie;
   color: @font-default-color;
 }
-.store-remark{
+.brand-remark{
   font-size: @remark-font-szie;
   color: #cccccc;
   margin-left: 3px;
 }
-.store-imgs{
+.brand-imgs{
   height: @recommend-item-height - @recommend-item-title-height;
 }
-.store-img-b{
+.brand-img-b{
   width: @big-img-size - @img-margin * 2;
   height: @big-img-size - @img-margin * 2;
   .float-left;
@@ -77,17 +78,17 @@
   box-sizing: border-box;
   margin: 1px;
 }
-.store-img-b > img{
+.brand-img-b > img{
   width: @big-img-size - @img-margin * 2;
   height: @big-img-size - @img-margin * 2;
 }
-.store-img-s{
+.brand-img-s{
   width:  @smart-img-size;
   height: @big-img-size;
   .float-left;
   overflow: hidden;
   .float-left;
-  > .store-img-smart{
+  > .brand-img-smart{
     width: @smart-img-size;
     height: @smart-img-size;
     > img{

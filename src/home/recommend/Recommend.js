@@ -1,5 +1,6 @@
 import React,{PureComponent} from 'react';
 import Store from './Store';
+import Brand from './Brand';
 import './Recommend.less';
 
 class Recommend extends PureComponent{
@@ -7,6 +8,7 @@ class Recommend extends PureComponent{
     return (
       <div className='recommends'>
         <Store></Store>
+        <Brand></Brand>
       </div>
     );
   }

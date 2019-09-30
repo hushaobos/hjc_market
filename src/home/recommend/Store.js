@@ -6,6 +6,7 @@ class StoreItem extends PureComponent{
   render = () =>{
     const  {
       title,
+      remark,
       link,
       imgb,
       imgs
@@ -14,21 +15,26 @@ class StoreItem extends PureComponent{
     return (
       <div className='store-bd'>
         <div className='store-t'>
-          <a href={link} target='blank'>{title}</a>
+          <a href={link} target='blank'>
+          <span className='store-slogan'>{title}</span>
+          <span className='store-remark'>{remark}</span>
+          </a>
         </div>
         <div className='store-imgs'>
-          <img className='img-b' src={imgb} alt='好店'></img>
-          <div className='img-s'>
-            <ul>
+          <a href={link} target='blank'>
+            <div className='store-img-b' >
+              <img src={imgb} alt='好店'></img>
+            </div>
+            <div className='store-img-s'>
               {
                 imgs.map(item =>(
-                  <li>
+                  <div className='store-img-smart'>
                     <img src={item} alt='好店'></img>
-                  </li>
+                  </div>
                 ))
               }
-            </ul>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     );
@@ -45,9 +51,12 @@ class Store extends PureComponent{
         </div>
         <div className='stores-p'>
           <StoreItem
-          
-            imgs={['','','']}></StoreItem>
-        </div>
+            title='eqweqw'
+            remark='ewq'
+            link=''
+            imgb='https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp'
+            imgs={['https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp','https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp','https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp']}></StoreItem>
+          </div>
       </div>
     );
   }
