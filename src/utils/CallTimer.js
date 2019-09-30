@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TimeCountDown from './TimeCountDown';
+import './timeDown.less';
 function formateTimeStr(num) {
   return num < 10 ? `0${num}` : num;
 }
@@ -28,7 +29,9 @@ class CallTimer extends Component {
             return (
               <span>
                 {stage === 0 ? '距离开始 ' : '剩余时间 '}
-                {day}天{formateTimeStr(hour)}:{formateTimeStr(minute)}:{formateTimeStr(second)}
+                <span className='time-num'>{day}</span>天 <span className='time-num'>{formateTimeStr(hour)}</span>:
+                <span className='time-num'>{formateTimeStr(minute)}</span>:
+                <span className='time-num'>{formateTimeStr(second)}</span>
               </span>
             );
           }}
