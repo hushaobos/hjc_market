@@ -5,6 +5,9 @@ import MainNav from './mainnav/MainNav';
 import TitleNav from './TitleNav';
 import PanicBuy from './panicbuy/PanicBuy';
 import Recommend from './recommend/Recommend';
+import Collocation from './collocation/Collocation';
+import HotSell from './HotSell';
+import LikeCommodity from './LikeCommodity';
 
 class Home extends PureComponent{
   render(){
@@ -16,6 +19,9 @@ class Home extends PureComponent{
       <MainNav></MainNav>
       <PanicBuy></PanicBuy>
       <Recommend></Recommend>
+      <Collocation></Collocation>
+      <HotSell></HotSell>
+      <LikeCommodity></LikeCommodity>
     </Fragment>);
   }
 }

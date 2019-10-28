@@ -9,7 +9,7 @@
 
 .spike-bd{
   .web-model-default(385px);
-  margin-top: 20px;
+  margin-top: @line-box-margin;
 }
 
 .spike-title{
@@ -56,16 +56,9 @@
 
 .spike-good-price
 {
-  width: @spike-good-width;
-  height: 30px;
-  line-height: 30px;
-  > strong{
-    float: right;
-    text-align: right;
-    color: @price-color;
-    margin-right: 15px;
-  }
+  .price(@spike-good-width);
 }
+
 .spike-good-buy{
   width: @spike-good-width;
   height: 50px;

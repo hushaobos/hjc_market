@@ -1,8 +1,8 @@
 @import './Recommend.less';
 
+@Brand-color: #ff8900;
 .brands{
   .box-default(@Block-width,@recommend-height);
-  margin-left: 10px;
 }
 
 .brands-head{
@@ -16,17 +16,17 @@
     font-size: @box-head-font;
     font-weight: 500;
     text-indent: 3mm;
-    color: #4CAF50;
+    color: @Brand-color;
     width: 140px;
     height: @box-head-height;
   }
   > a{
     float: right;
     margin:0 10px;
-    .a-default(#4CAF50);
+    .a-default(@Brand-color);
   }
   > a:hover{
-    .a-default-hover(green);
+    .a-default-hover(#ff5f00);
   }
 }
 .brands-p{
@@ -47,7 +47,7 @@
 }
 .brand-bd:hover .brand-slogan
 {
-  color: @price-color;
+  color: @Brand-color;
 }
 .brand-imgs,.brand-t
 {
@@ -60,12 +60,12 @@
 }
 .brand-slogan{
   font-size: @slogan-font-szie;
-  color: @font-default-color;
+  color: @title-color;
 }
 .brand-remark{
   font-size: @remark-font-szie;
-  color: #cccccc;
-  margin-left: 3px;
+  color: @999-color;
+  margin-left: @remark-left;
 }
 .brand-imgs{
   height: @recommend-item-height - @recommend-item-title-height;

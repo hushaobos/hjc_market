@@ -1,0 +1,43 @@
+@import '../default.less';
+
+@likesell-title-height: 40px;
+@likesell-marign: 5px 5px;
+@likesell-bd-height: 1111px;
+@likesell-items-height: @likesell-bd-height - @box-head-height;
+.like-sells{
+  .web-model-default(@likesell-bd-height,#FFFFFF00,@font-default-color,@line-box-margin * 2);
+}
+
+.like-hd{
+  .default-box-head(@box-head-height,@likesell-hd-color);
+  .box-default(@web-width,@box-head-height);
+}
+
+.like-hd > h2{
+  width: 100px;
+  height: @likesell-title-height;
+  line-height: @likesell-title-height;
+  margin: @likesell-marign;
+  color: white;
+  border-radius: 50%;
+  background-color: @likesell-hd-color;
+}
+
+.like-items{
+  .box-default(@web-width,@likesell-items-height,#FFFFFF00);
+}
+
+.like-items-bd{
+  .ul-none;
+  .box-default(@web-width,@likesell-items-height,#FFFFFF00);
+}
+
+.like-item{
+  .box-default(@item-width,@item-height);
+  margin-top: @web-model-margin;
+  margin-left: @item-left-margin;
+}
+.like-item:nth-child(5n+1)
+{
+  margin-left: 0 !important;
+}

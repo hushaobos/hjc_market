@@ -1,0 +1,43 @@
+@import '../default.less';
+
+@hotsell-title-height: 40px;
+@hotsell-marign: 5px 5px;
+@hotsell-bd-height: 1111px;
+@hotsell-items-height: @hotsell-bd-height - @box-head-height;
+.hot-sells{
+  .web-model-default(@hotsell-bd-height,#FFFFFF00,@font-default-color,@line-box-margin * 2);
+}
+
+.hot-hd{
+  .default-box-head(@box-head-height,@hotsell-hd-color);
+  .box-default(@web-width,@box-head-height);
+}
+
+.hot-hd > h2{
+  width: 100px;
+  height: @hotsell-title-height;
+  line-height: @hotsell-title-height;
+  margin: @hotsell-marign;
+  color: white;
+  border-radius: 50%;
+  background-color: @hotsell-hd-color;
+}
+
+.hot-items{
+  .box-default(@web-width,@hotsell-items-height,#FFFFFF00);
+}
+
+.hot-items-bd{
+  .ul-none;
+  .box-default(@web-width,@hotsell-items-height,#FFFFFF00);
+}
+
+.hot-item{
+  .box-default(@item-width,@item-height);
+  margin-top: @web-model-margin;
+  margin-left: @item-left-margin;
+}
+.hot-item:nth-child(5n+1)
+{
+  margin-left: 0 !important;
+}

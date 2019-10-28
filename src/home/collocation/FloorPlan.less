@@ -1,0 +1,100 @@
+@import './Collocation.less';
+
+@floor-list-height: @collocation-height - @box-head-height;
+@floor-item-width:290px;
+@floor-item-height:218px;
+@writing-width:290px;
+@writing-height:174px;
+
+.floors{
+  .box-default(@floor-plan-width,@collocation-height);
+  margin-left: @web-model-margin;
+}
+
+.floors-hd{
+  .default-box-head(@box-head-height,@floor-plan-hd-color);
+}
+
+.floors-list{
+  .box-default(@floor-plan-width,@floor-list-height);
+}
+
+.floor-item,.floor-item-pic-b,.floor-item-pic-b img{
+  .box-default(@floor-item-width,@floor-item-height);
+}
+.floor-item{
+  margin: 0 9px;
+  position: relative;
+}
+
+.floor-item:hover .floor-item-copywriting{
+  display: block;
+  -webkit-animation: copywriting-scale 1s ease forwards;
+}
+
+@keyframes copywriting-scale{
+  form{
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  to{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes copywriting-scale-start{
+  form{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  to{
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+}
+
+.floor-item-copywriting{
+  .box-default(@writing-width,@writing-height,#ffffff00);
+  overflow: hidden;
+  white-space:pre-line;
+  display: block;
+  position: absolute;
+  right:0;
+  bottom:0;
+  z-index: 2;
+  background-color: rgba(@bg-alpha-color,0.6);
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -o-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
+.copywriting-title{
+  font-size: 16px;
+  font-weight: normal;
+  color: #ffffff;
+}
+.copywriting-content,.copywriting-design{
+  font-size: 12px;
+  color: #ffffff;
+  word-spacing: 1mm;
+}

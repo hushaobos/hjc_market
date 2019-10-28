@@ -1,7 +1,9 @@
 @import './Recommend.less';
 
+@store-color: #ff5676;
 .stores{
   .box-default(@Block-width,@recommend-height);
+  margin-left: 10px;
 }
 
 .stores-head{
@@ -15,14 +17,14 @@
     font-size: @box-head-font;
     font-weight: 500;
     text-indent: 3mm;
-    color: @price-color;
+    color: @store-color;
     width: 140px;
     height: @box-head-height;
   }
   > a{
     float: right;
     margin:0 10px;
-    .a-default(@price-color);
+    .a-default(@store-color);
   }
   > a:hover{
     .a-default-hover(red);
@@ -40,7 +42,7 @@
 }
 .store-bd:hover .store-slogan
 {
-  color: @price-color;
+  color: @store-color;
 }
 .store-t,.store-imgs,.store-img-b,.store-img-s{
   > a{
@@ -59,12 +61,12 @@
 }
 .store-slogan{
   font-size: @slogan-font-szie;
-  color: @font-default-color;
+  color: @title-color;
 }
 .store-remark{
   font-size: @remark-font-szie;
-  color: #cccccc;
-  margin-left: 3px;
+  color: @999-color;
+  margin-left: @remark-left;
 }
 .store-imgs{
   height: @recommend-item-height - @recommend-item-title-height;

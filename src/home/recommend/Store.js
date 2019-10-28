@@ -51,12 +51,45 @@ class Store extends PureComponent{
         </div>
         <div className='stores-p'>
           <StoreItem
-            title='eqweqw'
-            remark='ewq'
+            title='出云亭'
+            remark='六年老店，品质保证'
             link=''
-            imgb='https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp'
-            imgs={['https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp','https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp','https://preview.qiantucdn.com/58pic/35/23/71/73g58PIC18fead4fpCf8t_PIC2018.jpg!qt324new_nowater_webp']}></StoreItem>
-          </div>
+            imgb='https://gw.alicdn.com/bao/uploaded/i3/63451248/TB29mETdiGO.eBjSZFpXXb3tFXa_!!63451248.jpg_180x180xz.jpg'
+            imgs={[
+              'https://gw.alicdn.com/bao/uploaded/i4/63451248/TB2_2RQl25TBuNjSspcXXbnGFXa_!!63451248.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i3/63451248/TB2njp2tXXXXXcjXpXXXXXXXXXX_!!63451248.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i3/63451248/TB29mETdiGO.eBjSZFpXXb3tFXa_!!63451248.jpg_90x90xz.jpg']}>
+          </StoreItem>
+          <StoreItem
+            title='小葵川町屋'
+            remark='吃饭是一件幸福的事'
+            link=''
+            imgb='https://gw.alicdn.com/bao/uploaded/i1/86804191/O1CN01IAA7Ni1gpWTUBS75S_!!0-item_pic.jpg_180x180xz.jpg'
+            imgs={[
+              'https://gw.alicdn.com/bao/uploaded/i2/86804191/O1CN01ugCg0v1gpWTUBTJwT_!!0-item_pic.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i3/86804191/O1CN01dKWB1x1gpWTQlCvTm_!!0-item_pic.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i3/86804191/O1CN01lNJSKd1gpWTQU1qsK_!!0-item_pic.jpg_90x90xz.jpg']}>
+          </StoreItem>
+          <StoreItem
+            title='谷雨中国礼'
+            remark='纳良追求的是一种慢生活的理念'
+            link=''
+            imgb='https://gw.alicdn.com/bao/uploaded/i1/1305104/O1CN01M3S1bS1nZg3QfwTKp_!!1305104.png_180x180xz.jpg'
+            imgs={[
+              'https://gw.alicdn.com/bao/uploaded/i4/1305104/O1CN01cZ9HcS1nZg3Qg1dwy_!!1305104.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i3/1305104/O1CN01SZtEjv1nZg3Xorwll_!!1305104.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i1/1305104/O1CN01Kokt1W1nZg3XSPZjP_!!1305104.jpg_90x90xz.jpg']}>
+          </StoreItem>
+          <StoreItem
+            title='上海肥龙搪瓷品'
+            link=''
+            imgb='https://gw.alicdn.com/bao/uploaded/i4/43623533/TB2e2BUol8lpuFjy0FnXXcZyXXa_!!43623533.jpg_180x180xz.jpg'
+            imgs={[
+              'https://gw.alicdn.com/bao/uploaded/i2/43623533/TB2_SfaaQfb_uJjSsrbXXb6bVXa_!!43623533.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i1/43623533/TB2vBV5bBDH8KJjSszcXXbDTFXa_!!43623533.jpg_90x90xz.jpg',
+              'https://gw.alicdn.com/bao/uploaded/i4/43623533/TB2e2BUol8lpuFjy0FnXXcZyXXa_!!43623533.jpg_90x90xz.jpg']}>
+          </StoreItem>
+        </div>
       </div>
     );
   }

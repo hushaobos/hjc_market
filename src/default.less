@@ -1,12 +1,26 @@
 @web-width: 1242px;
 @width-600: 600px;
 @web-model-margin: 10px;
+@web-model-padding: 10px;
 @web-theme-color:#CBB993;
 @font-default-color:#666666;
 @price-color: #ff5900;
 @Block-width: 616px;
 @box-head-height: 55px;
 @box-head-font: 20px;
+@title-color:#333333;
+@999-color:#999999;
+@border-color:#eeeeee;
+@floor-plan-hd-color:#28ABFF;
+@bg-alpha-color:#cccccc;
+@hotsell-hd-color:#FF2951;
+@likesell-hd-color: #FF7700;
+@line-box-margin:20px;
+@item-width:238px;
+@item-height:342px;
+@item-left-margin:13px;
+@item-pic-height:188px;
+@item-pic-width:218px;
 
 .center(@top-margin: 0){
     margin: @top-margin auto;
@@ -27,6 +41,7 @@
     width: @width;
     height: @height;
     background-color: @bgcolor;
+    box-sizing: border-box;
     .float-left;
 }
 
@@ -63,4 +78,45 @@
 {
     text-decoration: underline;
     color: @a-h-color;
+}
+
+.default-box-head(@box-height: @box-head-height,@font-color:@web-theme-color,@font-size: @box-head-font){
+    > h2{
+      line-height: @box-height;
+      font-size: @font-size;
+      font-weight: 500;
+      text-indent: 3mm;
+      display: block;
+      width: 140px;
+      height: @box-height;
+      float: left;
+      margin: 0;
+      color: @font-color;
+    }
+    > a{
+      .a-default(@font-color;);
+      float: right;
+      margin: 10px;
+    }
+    > a:hover{
+      .a-default-hover(@font-color);
+    }
+  }
+
+.price(@width:30px,@height:30px)
+{
+  width: @width;
+  height: @height;
+  line-height: @height;
+  > strong{
+    float: right;
+    text-align: right;
+    color: @price-color;
+    margin-right: 15px;
+  }
+}
+
+.title{
+    font-size: 18px;
+    color: @title-color;
 }

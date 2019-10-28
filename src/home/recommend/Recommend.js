@@ -7,8 +7,8 @@ class Recommend extends PureComponent{
   render = () =>{
     return (
       <div className='recommends'>
-        <Store></Store>
         <Brand></Brand>
+        <Store></Store>
       </div>
     );
   }
