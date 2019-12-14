@@ -9,7 +9,7 @@ class Tourist extends PureComponent{
         <span>hi，游客你好</span>
       </div>
       <div className='u-logout'>
-        <a  target='blank' href=''>登录</a>
+        <a  target='blank' href={process.env.HJC_LOGIN}>登录</a>
         <a  target='blank' href=''>注册</a>
       </div>
     </div>
